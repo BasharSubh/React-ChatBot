@@ -17,7 +17,7 @@ function App() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:5000/data?question=${question}`);
+      const response = await axios.get(`https://react-chatbot-server.onrender.com/data?question=${question}`);
       const data = response.data; 
       const newTitle = !title ? question : title; 
       if (!title) {
